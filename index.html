@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title></title>
+    <!--<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+    <script src="./p5.js"></script>
+    <style type="text/css" media="screen">
+*{
+  padding:0;
+  margin:0;
+}
+body{
+  display:flex;
+  flex-direction:row;
+  <!--flex-wrap:nowrap;-->
+  align-items:stretch;
+}
+
+#container{
+}
+textarea{
+  width:100%;
+  height:50vh;
+}
+    </style>
+  </head>
+  <body>
+    <div>
+      <textarea id="result"></textarea>
+      <input type="file" onchange="updateimage()" id="img">
+      <input type="text" value="1" id="beginIndex" onchange="changeBegin()"/>begin
+      <br></br>
+      <input type="checkbox" id="ignoreX" onchange="changeIgnore('x')">ignore x
+      <br>
+      <input type="checkbox" id="ignoreY" onchange="changeIgnore('y')">ignore y
+      <br></br>
+      <input type="range" id="fa" value="10" max=100 min=0 step=1 onchange="changeFa()">
+      <span id="fashow">10</span>
+      <br></br>
+      <input type="checkbox" id="ignoreDot" onchange="changeDot()">ignore dot 
+    </div>
+    <div id='container'>
+    </div>
+    <script src="sketch.js"></script>
+  </body>
+</html>
