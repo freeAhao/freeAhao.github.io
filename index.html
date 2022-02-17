@@ -13,13 +13,13 @@
 }
 body{
   display:flex;
+  width: 100vw;
+  height: 100vh;
   flex-direction:row;
   <!--flex-wrap:nowrap;-->
   align-items:stretch;
 }
 
-#container{
-}
 textarea{
   width:100%;
   height:50vh;
@@ -29,22 +29,23 @@ textarea{
   width:100%;
   height:100vh;
 }
+
     </style>
   </head>
   <body>
-    <div>
+    <div id="left">
       <textarea id="result"></textarea>
       <input type="file" onchange="updateimage()" id="img">
       <input type="text" value="1" id="beginIndex" onchange="changeBegin()"/>begin
       <br></br>
-      <input type="checkbox" id="ignoreX" onchange="changeIgnore('x')">ignore x
+      <input type="checkbox" id="ignoreX" onchange="changeIgnore('x')">忽略横轴
       <br>
-      <input type="checkbox" id="ignoreY" onchange="changeIgnore('y')">ignore y
+      <input type="checkbox" id="ignoreY" onchange="changeIgnore('y')">忽略纵轴
       <br></br>
       <input type="range" id="fa" value="10" max=100 min=0 step=1 onchange="changeFa()">
       <span id="fashow">10</span>
       <br></br>
-      <input type="checkbox" id="ignoreDot" onchange="changeDot()">ignore dot 
+      <input type="checkbox" id="ignoreDot" onchange="changeDot()">四舍五入取整
     </div>
     <div id='container'>
     </div>
